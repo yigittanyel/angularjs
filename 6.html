@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deneme</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myAngular">
+    <h3> {{color}}</h3>
+    <div ng-controller="myControl">
+        <h3>{{color}}</h3>
+    </div>
+    <script>
+        var myAngular=angular.module("myAngular",[]);
+        myAngular.run(function($rootscope){
+            $rootscope.color="red";
+        });
+        myAngular.controller("myControl",function($scope){
+            $scope.color="blue";
+        });
+    </script>
+</body>
+</html>

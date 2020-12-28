@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deneme</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myAngular">
+    <div ng-controller="myControl">
+        <p>Enter your name: <input type="text" ng-model="fName"></p>
+        <h3>{{fName+sName}}</h3>
+    </div>
+    <script>
+        var myAngular=angular.module("myAngular",[]);
+        myAngular.controller("myControl",function($scope){
+            $scope.fName="ALex ";
+            $scope.sName="Caruso"
+        });
+    </script>
+</body>
+</html>

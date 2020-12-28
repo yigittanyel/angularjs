@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Deneme</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        input.ng-invalid{
+            border:2px solid red;
+        }
+        input.ng-valid{
+            border:2px solid blue;
+            background-color: orange;
+        }
+        input.ng-empty{
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body>
+        <form ng-app="myAngular" ng-controller="myControl" name="myFrm">
+            <p> E-mailinizi giriniz: <input type="email" name="eposta" ng-model="eposta"></p>
+            
+        </form>
+    <script>
+        var myAngular=angular.module("myAngular",[]);
+        myAngular.controller("myControl",function($scope){
+            $scope.eposta="tanyelyigit@gmail.com";
+        });
+    </script>
+</body>

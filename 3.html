@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Deneme</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myAngular" ng-controller="myControl">
+            
+            <p>Ürün sayısını giriniz: <input type="number" ng-model="sayi"></p>
+            <p>Ürün fiyatını giriniz: <input type="number" ng-model="fiyat"></p>
+            <h3>Toplam tutar: {{sayi*fiyat}}</h3>
+        </div>
+        <div ng-app="myAngular2">
+            <text-directive></text-directive>
+        </div>
+        <script>
+            var myAngular=angular.module("myAngular",[]);
+            var myAngular2=angular.module("myAngular2",[]);
+            myAngular2.directive("testDirective",function(){
+                return {
+                    template: "<h3> AngularJS </h3>"
+                };
+            });
+            myAngular.controller("myControl",function($scope){
+                $scope.sayi=7;
+                $scope.fiyat=10;
+            });
+           
+        </script>
+    </body>
+</html>
